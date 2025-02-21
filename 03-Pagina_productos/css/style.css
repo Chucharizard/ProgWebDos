@@ -191,67 +191,54 @@ body {
 }
 
 .rodapePrincipal-navMap {
-    margin-bottom: 3rem;
+    padding: 30px 0;
+    text-align: center;
 }
 
 .rodapePrincipal-navMap .subtitulo {
     color: white;
-    text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
 }
 
 .rodapePrincipal-navMap-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
 }
 
 .navmap-column {
-    background: rgba(255,255,255,0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.navmap-column:hover {
-    transform: translateY(-5px);
+    background: #ffffff10;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
 }
 
 .navmap-list-title {
-    font-size: 1.2em;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid currentColor;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
 }
 
 .rodapePrincipal-navMap-link {
-	text-decoration: none;
-	color: #FFF;
-	margin-top: 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
 }
 
-.rodapePrincipal-navMap-link {
-	font-size: .9em;
+.rodapePrincipal-navMap-link:hover {
+    color: #4DBA7A;
 }
 
-.navmap-list-title {
-	font-weight: 700;
-	font-size: 1.3em;
-	margin: .9em 0;
-	padding-left: .3em;
-	padding-top: .2em;
-	padding-bottom: .2em;
-}
-
-.navmap-list-title + .rodapePrincipal-navMap-link {
-	margin-top: 0;
-}
-
-.navmap-list-title-zara { color: #ec5aaf; border-left: 4px solid #EC6E5A; }
-.navmap-list-title-adidas { color: #9785bf; border-left: 4px solid #AD85BF; }
-.navmap-list-title-nike { color: #775ef3; border-left: 4px solid #5EC6F3; }
-.navmap-list-title-polo { color: #6725d2; border-left: 4px solid #25D285; }
+/* Colores de las marcas simplificados */
+.navmap-list-title-polo { color: #EC6E5A; }
+.navmap-list-title-adidas { color: #AD85BF; }
+.navmap-list-title-nike { color: #5EC6F3; }
+.navmap-list-title-zara { color: #ec5aaf; }
 
 .rodapePrincipal-patrocinadores {
     background: rgba(255,255,255,0.05);
