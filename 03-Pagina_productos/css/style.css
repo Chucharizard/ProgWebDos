@@ -9,31 +9,60 @@ body {
 }
 
 .headerPrincipal {
-	background-color: #FFF;
-	padding: 20px 0;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .headerPrincipal-titulo {
-	font-weight: bold;
-	font-size: 2em;
-	margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .headerPrincipal-titulo a {
-	text-decoration: none;
-	color: inherit;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.headerPrincipal-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .headerPrincipal-nav-link {
-	padding: 10px;
-	margin-bottom: 10px;
-	color: #9799A6;
-	background-color: #FFF;
-	text-decoration: none;
-	transition: .5s;
-	display: block;
+    padding: 0.8rem 1.5rem;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
 
-	border-bottom: 1px solid #9799A6;
+.headerPrincipal-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.headerPrincipal-nav-link.headerPrincipal-nav-link-app {
+    background-color: #4DBA7A;
+    color: white;
+}
+
+.headerPrincipal-nav-link.headerPrincipal-nav-link-app:hover {
+    background-color: #3d9463;
+    box-shadow: 0 4px 12px rgba(77, 186, 122, 0.3);
 }
 
 .contenidoPrincipal {
@@ -41,37 +70,95 @@ body {
 	margin-bottom: 20px;
 }
 
+#contenedor-p {
+    padding: 2rem 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin: 2rem auto;
+}
+
+.contenidoPrincipal-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
 .subtitulo {
-	font-weight: bold;
-	font-size: 32px;
-	margin-bottom: 10px;
-	text-align: center;
+    color: #1a2a6c;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.subtitulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #1a2a6c, #b21f1f);
+    border-radius: 2px;
 }
 
 .contenidoPrincipal-productos-link {
-	height: 100px;
-	background-color: #FFF;
-	text-align: center;
-	margin: 1%;
-	transition: .3s;
-	box-shadow: 2px 2px 2px #CCC;
-	position: relative;
+    background: white;
+    border-radius: 12px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenidoPrincipal-productos-link a {
-	text-decoration: none;
-	color: #000;
-	font-weight: bold;
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.05) 0%, transparent 100%);
+    transition: all 0.3s ease;
 }
 
 .contenidoPrincipal-productos-link:hover {
-	box-shadow: 4px 4px 4px #CCC;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.contenidoPrincipal-productos-link:hover a {
+    color: #1a2a6c;
+    background: linear-gradient(to top, rgba(26,42,108,0.1) 0%, transparent 100%);
+}
+
+.contenidoPrincipal-productos-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+    top: -100%;
+    left: -100%;
+    transition: all 0.6s ease;
+}
+
+.contenidoPrincipal-productos-link:hover::before {
+    top: 100%;
+    left: 100%;
 }
 
 .contenidoPrincipal-productos-link a:before {
@@ -94,12 +181,48 @@ body {
 
 
 .rodapePrincipal {
-	background-color: #23292d;
-	padding-top: 20px;
+    background: #1a2a6c;
+    padding: 4rem 0 2rem;
+    color: white;
 }
 
 .rodapePrincipal .subtitulo {
 	color: #FFF;
+}
+
+.rodapePrincipal-navMap {
+    margin-bottom: 3rem;
+}
+
+.rodapePrincipal-navMap .subtitulo {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rodapePrincipal-navMap-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.navmap-column {
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navmap-column:hover {
+    transform: translateY(-5px);
+}
+
+.navmap-list-title {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid currentColor;
 }
 
 .rodapePrincipal-navMap-link {
@@ -131,9 +254,153 @@ body {
 .navmap-list-title-polo { color: #6725d2; border-left: 4px solid #25D285; }
 
 .rodapePrincipal-patrocinadores {
-	margin-top: 30px;
-	background: #F2F5F7;
-	padding: 20px 0;
+    background: rgba(255,255,255,0.05);
+    padding: 2rem 0;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.rodapePrincipal-patrocinadores-list img {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.rodapePrincipal-patrocinadores-list img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.rodapePrincipal-contatoForm {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+}
+
+.rodapePrincipal-contatoForm-legend {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    gap: 1rem;
+}
+
+.rodapePrincipal-contatoForm-emailInput {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.rodapePrincipal-contatoForm-submit {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: #4DBA7A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rodapePrincipal-contatoForm-submit:hover {
+    background: #3d9463;
+    transform: translateY(-2px);
+}
+
+.videoSobre {
+    background: linear-gradient(135deg, #1a2a6c 0%, #2c3e50 100%);
+    padding: 4rem 0;
+    color: white;
+}
+
+.videoSobre .container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.videoSobre-video {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.videoSobre-video:hover {
+    transform: scale(1.02);
+}
+
+.videoSobre-sobre {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.videoSobre-sobre-title {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.videoSobre-sobre-list {
+    margin: 2rem 0;
+}
+
+.videoSobre-sobre-item {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1em;
+}
+
+.videoSobre-sobre-item::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4DBA7A;
+}
+
+.videoSobre-button {
+    background: #4DBA7A;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+.videoSobre-button:hover {
+    background: #3d9463;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(77,186,122,0.4);
 }
 
 .rodapePrincipal-contatoForm {
