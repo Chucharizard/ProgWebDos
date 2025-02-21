@@ -3,22 +3,13 @@ body {
 	font-family: 'Open Sans',Arial,sans-serif;
 }
 
-header{
-	background-color: #CCC;
-	margin-bottom: 30px;
-	text-align: center;
-}
-nav{
-	margin-top: 30px;
-	
-}
 .container {
-	width: 100%;
+	width: 94%;
 	margin: 0 auto;
 }
 
-.headerPrincipal-nav {
-	background-color: #CCC;
+.headerPrincipal {
+	background-color: #FFF;
 	padding: 20px 0;
 }
 
@@ -40,40 +31,31 @@ nav{
 	background-color: #FFF;
 	text-decoration: none;
 	transition: .5s;
+	display: block;
 
 	border-bottom: 1px solid #9799A6;
 }
 
-.contenedor-principal {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.contenidoPrincipal {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
 
 .subtitulo {
 	font-weight: bold;
 	font-size: 32px;
 	margin-bottom: 10px;
 	text-align: center;
-	align-items: center;
-	justify-content: center;
-}
-.contenidoPrincipal-productos {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 .contenidoPrincipal-productos-link {
-	height: 200px;
+	height: 100px;
 	background-color: #FFF;
 	text-align: center;
 	margin: 1%;
 	transition: .3s;
 	box-shadow: 2px 2px 2px #CCC;
 	position: relative;
-	width: 300px;
 }
 
 .contenidoPrincipal-productos-link a {
@@ -86,16 +68,10 @@ nav{
 	position: absolute;
 	top: 0;
 	left: 0;
-	margin-top: 40px;
 }
 
 .contenidoPrincipal-productos-link:hover {
 	box-shadow: 4px 4px 4px #CCC;
-	transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
 }
 
 .contenidoPrincipal-productos-link a:before {
@@ -118,133 +94,9 @@ nav{
 
 
 .rodapePrincipal {
-	background-color: #1a1a1a;
-	padding: 60px 0 30px;
-	color: #fff;
+	background-color: #23292d;
+	padding-top: 20px;
 }
-
-.rodapePrincipal-navMap {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0 20px;
-}
-
-.rodapePrincipal-navMap-list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 30px;
-	width: 100%;
-	margin-top: 30px;
-}
-
-.navmap-column {
-	background: rgba(255, 255, 255, 0.05);
-	padding: 20px;
-	border-radius: 10px;
-	transition: transform 0.3s ease;
-}
-
-.navmap-column:hover {
-	transform: translateY(-5px);
-}
-
-.navmap-list-title {
-	font-size: 1.2em;
-	margin-bottom: 15px;
-	padding: 10px;
-	border-radius: 5px;
-}
-
-.rodapePrincipal-navMap-link {
-	display: block;
-	padding: 8px 10px;
-	color: #ccc;
-	transition: all 0.3s ease;
-	border-radius: 5px;
-}
-
-.rodapePrincipal-navMap-link:hover {
-	background: rgba(255, 255, 255, 0.1);
-	color: #fff;
-	transform: translateX(5px);
-}
-
-.rodapePrincipal-patrocinadores {
-	background: #222;
-	padding: 40px 0;
-	margin-top: 40px;
-}
-
-.rodapePrincipal-patrocinadores-list {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 30px;
-	padding: 20px;
-}
-
-.rodapePrincipal-patrocinadores-list img {
-	width: 80px;
-	opacity: 0.7;
-	transition: all 0.3s ease;
-	filter: grayscale(100%);
-}
-
-.rodapePrincipal-patrocinadores-list img:hover {
-	opacity: 1;
-	filter: grayscale(0%);
-	transform: scale(1.1);
-}
-
-.rodapePrincipal-contatoForm {
-	max-width: 500px;
-	margin: 40px auto 0;
-	padding: 20px;
-	background: rgba(255, 255, 255, 0.05);
-	border-radius: 10px;
-}
-
-.rodapePrincipal-contatoForm-legend {
-	color: #fff;
-	font-size: 1.2em;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.rodapePrincipal-contatoForm-fieldset {
-	display: flex;
-	gap: 10px;
-}
-
-.rodapePrincipal-contatoForm-emailInput {
-	flex: 1;
-	padding: 12px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	background: rgba(255, 255, 255, 0.05);
-	border-radius: 5px;
-	color: #fff;
-	font-size: 0.9em;
-}
-
-.rodapePrincipal-contatoForm-submit {
-	padding: 12px 25px;
-	background: #4DBA7A;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background 0.3s ease;
-}
-
-.rodapePrincipal-contatoForm-submit:hover {
-	background: #3d9463;
-}
-
-.navmap-list-title-zara { background: rgba(236, 90, 175, 0.1); }
-.navmap-list-title-adidas { background: rgba(151, 133, 191, 0.1); }
-.navmap-list-title-nike { background: rgba(119, 94, 243, 0.1); }
-.navmap-list-title-polo { background: rgba(103, 37, 210, 0.1); }
 
 .rodapePrincipal .subtitulo {
 	color: #FFF;
@@ -279,17 +131,9 @@ nav{
 .navmap-list-title-polo { color: #6725d2; border-left: 4px solid #25D285; }
 
 .rodapePrincipal-patrocinadores {
-	background: #222;
-	padding: 40px 0;
-	margin-top: 40px;
-}
-
-.rodapePrincipal-contatoForm {
-	max-width: 500px;
-	margin: 40px auto 0;
-	padding: 20px;
-	background: rgba(255, 255, 255, 0.05);
-	border-radius: 10px;
+	margin-top: 30px;
+	background: #F2F5F7;
+	padding: 20px 0;
 }
 
 .rodapePrincipal-contatoForm {
@@ -331,8 +175,6 @@ nav{
 .videoSobre {
 	background-color: #343c44;
 	padding: 25px 0;
-	text-align: center;
-
 
 }
 
@@ -372,7 +214,11 @@ nav{
 @media(min-width: 769px) {
 
 	.container {
-		width: 100%;	
+		width: 85%;	
+	}
+
+	.subtitulo {
+		text-align: left;
 	}
 
 	.headerPrincipal-nav-link {
@@ -387,13 +233,6 @@ nav{
 
 	.headerPrincipal-titulo {
 		margin: 0;
-		padding-top: 30px;
-	}
-	.headerPrincipal-titulo, h1{
-		margin: 0;
-		padding-top: 30px;
-		font-size: 50px;
-		
 	}
 
 	.headerPrincipal-nav {
